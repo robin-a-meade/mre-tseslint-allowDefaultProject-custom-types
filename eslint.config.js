@@ -18,7 +18,7 @@
 import react from 'eslint-plugin-react';
 
 import globals from 'globals';
-import eslint from '@eslint/js';
+import js from '@eslint/js';
 import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
@@ -26,7 +26,7 @@ export default tseslint.config(
     ignores: ['dist'],
   },
   { files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'] },
-  eslint.configs.recommended,
+  js.configs.recommended,
   ...tseslint.configs.strictTypeChecked,
   ...tseslint.configs.stylisticTypeChecked,
 
@@ -37,7 +37,7 @@ export default tseslint.config(
   //
   // It doesn't have type declarations yet
   //
-  // I created a type declarations file for it here:
+  // I put a type declarations shim file for it here:
   //
   //    typings/eslint-plugin-react.d.ts
   //
