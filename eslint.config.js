@@ -1,19 +1,17 @@
 /* eslint-disable @typescript-eslint/triple-slash-reference */
 /// <reference path="typings/eslint-plugin-react.d.ts" />
-// Bug: The above reference is needed, but shouldn't be needed.
-// Without the reference, hover over `react` in VSCode and you'll see
-// it picked up my custom type declaration in my `typings` dir.
-// (I added the `typings` dir to `typeRoots` in `tsconfig.json`)
+// Bug? The above reference shouldn't be needed.
+// I added the `typings` dir to the `typeRoots` key in `tsconfig.json`; that
+// should be sufficient for the linter to pick it up.
 // Yet running `pnpm exec eslint .` shows two errors for `react.configs.flat.recommended`
 // 1. Unsafe argument of type `any` assigned to a parameter of type `ConfigWithExtends` @typescript-eslint/no-unsafe-argument
 // 2. Unsafe member access .recommended on an `error` typed value @typescript-eslint/no-unsafe-member-access
-// It seems that files included via projectService.allowDefaultProject don't see my
-// custom typings when eslint is run.
+// For some reason, files included via projectService.allowDefaultProject don't see my custom typings when eslint is run
 // Additional things I tried:
 // 1. I tried adding the `typings` dir to the `include` key in `tsconfig.json`.
 //    Didn't help.
-// 2. I tried moving my custom type declaration from my `typings` dir to `node_modules/@types`.
-//    This worked; my custom type was recognized by eslint.
+// 2. I tried moving my custom typings from my `typings` dir to `node_modules/@types`.
+//    Worked. My custom type was recognized by eslint.
 //    But this is not a good solution.
 
 import react from 'eslint-plugin-react';
