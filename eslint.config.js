@@ -1,5 +1,5 @@
-// /* eslint-disable @typescript-eslint/triple-slash-reference */
-// /// <reference path="typings/eslint-plugin-react.d.ts" />
+/* eslint-disable @typescript-eslint/triple-slash-reference */
+/// <reference path="typings/eslint-plugin-react.d.ts" />
 // Bug: The above reference is needed, but shouldn't be needed.
 // Without the reference, hover over `react` in VSCode and you'll see
 // it picked up my custom type declaration in my `typings` dir.
