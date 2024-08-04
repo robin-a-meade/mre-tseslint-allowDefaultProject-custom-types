@@ -1,5 +1,5 @@
-/* eslint-disable @typescript-eslint/triple-slash-reference */
-/// <reference path="typings/eslint-plugin-react.d.ts" />
+// /* eslint-disable @typescript-eslint/triple-slash-reference */
+// /// <reference path="typings/eslint-plugin-react.d.ts" />
 // Bug? The above reference shouldn't be needed.
 // I added the `typings` dir to the `typeRoots` key in `tsconfig.json`; that
 // should be sufficient for the linter to pick it up.
