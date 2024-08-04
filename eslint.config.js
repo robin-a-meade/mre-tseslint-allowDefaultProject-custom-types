@@ -6,7 +6,8 @@
 // Yet running `pnpm exec eslint .` shows two errors for `react.configs.flat.recommended`
 // 1. Unsafe argument of type `any` assigned to a parameter of type `ConfigWithExtends` @typescript-eslint/no-unsafe-argument
 // 2. Unsafe member access .recommended on an `error` typed value @typescript-eslint/no-unsafe-member-access
-// For some reason, files included via projectService.allowDefaultProject don't see my custom typings when eslint is run
+// It seems that files included via projectService.allowDefaultProject don't see my
+// custom typings when eslint is run.
 // Additional things I tried:
 // 1. I tried adding the `typings` dir to the `include` key in `tsconfig.json`.
 //    Didn't help.
@@ -22,7 +23,7 @@ import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
   {
-    ignores: ['dist', 'typings'],
+    ignores: ['dist'],
   },
   { files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'] },
   eslint.configs.recommended,
