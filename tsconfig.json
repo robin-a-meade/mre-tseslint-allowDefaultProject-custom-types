@@ -8,13 +8,13 @@
     "strict": true,
     "esModuleInterop": true,
     "outDir": "dist",
-    "typeRoots": ["node_modules/@types", "typings"]
+    "typeRoots": ["./typings", "./node_modules/@types"]
   },
   "include": [
     "src/**/*.js",
     "src/**/*.jsx",
     "src/**/*.ts",
     "src/**/*.tsx",
-    "typings/**/*.ts"
+    "typings/**.ts"
   ]
 }

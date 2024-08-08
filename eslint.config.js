@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/triple-slash-reference */
 /// <reference path="typings/eslint-plugin-react.d.ts" />
 // Bug? The above reference shouldn't be needed.
-// I added the `typings` dir to the `typeRoots` key in `tsconfig.json`; that
+// I added the `./typings` dir to the `typeRoots` key in `tsconfig.json`; that
 // should be sufficient for the linter to pick it up.
 // Yet running `pnpm exec eslint .` shows two errors for `react.configs.flat.recommended`
 // 1. Unsafe argument of type `any` assigned to a parameter of type `ConfigWithExtends` @typescript-eslint/no-unsafe-argument
